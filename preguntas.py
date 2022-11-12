@@ -29,8 +29,8 @@ def pregunta_01():
     )
 
     # Separe los grupos de mensajes etiquetados y no etiquetados.
-    df_tagged = df[df["lbl"].notna()]
-    df_untagged = df[df["lbl"].isna()]
+    df_tagged = df[df["lbl"].notnull()]
+    df_untagged = df[df["lbl"].isnull()]
 
     x_tagged = df_tagged["msg"]
     y_tagged = df_tagged["lbl"]
