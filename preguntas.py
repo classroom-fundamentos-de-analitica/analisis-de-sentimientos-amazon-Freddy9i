@@ -74,7 +74,7 @@ def pregunta_03():
     """
     # Importe el stemmer de Porter
     # Importe CountVectorizer
-    from nltk.stem.porter import PorterStemmer
+    from nltk.stem import PorterStemmer
     from sklearn.feature_extraction.text import CountVectorizer
 
     # Cree un stemeer que use el algoritmo de Porter.
@@ -135,7 +135,7 @@ def pregunta_04():
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "BernoulliNB_Alpha": np.linspace(0.1, 1, 10),
+        "BernoulliNB__alpha": np.linspace(0.1, 1, 10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
